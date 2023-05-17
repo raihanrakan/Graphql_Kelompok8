@@ -1,0 +1,17 @@
+type Food {
+  id: ID!
+  name: String!
+  origin: String!
+  category: String!
+}
+
+type Query {
+  getAllFoods: [Food!]!
+  getFoodById(id: ID!): Food
+}
+
+type Mutation {
+  addFood(name: String!, origin: String!, category: String!): Food!
+  updateFood(id: ID!, name: String, origin: String, category: String): Food
+  deleteFood(id: ID!): ID
+}
